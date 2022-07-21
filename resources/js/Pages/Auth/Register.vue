@@ -9,6 +9,9 @@ import { Head, Link, useForm } from '@inertiajs/inertia-vue3';
 const form = useForm({
     name: '',
     email: '',
+    user_name: '',
+    phone:'',
+    address:'',
     password: '',
     password_confirmation: '',
     terms: false,
@@ -34,8 +37,24 @@ const submit = () => {
             </div>
 
             <div class="mt-4">
+                <BreezeLabel for="user_name" value="User Name" />
+                <BreezeInput id="user_name" type="text" class="mt-1 block w-full" v-model="form.user_name" required autofocus autocomplete="user_name" />
+            </div>
+
+          <div class="mt-4">
+                <BreezeLabel for="phone" value="Phone" />
+                <BreezeInput id="phone" type="text" class="mt-1 block w-full" v-model="form.phone" required autofocus autocomplete="phone" />
+            </div>
+
+
+            <div class="mt-4">
                 <BreezeLabel for="email" value="Email" />
                 <BreezeInput id="email" type="email" class="mt-1 block w-full" v-model="form.email" required autocomplete="username" />
+            </div>
+
+          <div class="mt-4">
+                <BreezeLabel for="address" value="Address" />
+                <BreezeInput id="address" type="text" class="mt-1 block w-full" v-model="form.address" required autocomplete="address" />
             </div>
 
             <div class="mt-4">
