@@ -25,6 +25,10 @@ use Inertia\Inertia;
 //    ]);
 //});
 
+Route::get('tes', function () {
+    return view('tes');
+});
+
 Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::post('/contact-form', [HomeController::class, 'contact'])->name('contact.store');
 
