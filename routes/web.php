@@ -28,4 +28,26 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::group([
+    'prefix' => 'admin',
+    'namespace' => 'Admin',
+    'as' => 'admin.'
+], function () {
+    Route::group(['middleware' => ['role:admin', 'auth']], function () {
+        route::get('/', [\App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('index');
+    });
+});
+
+Route::group([
+    'prefix' => 'developer',
+    'namespace' => 'Developer',
+    'as' => 'developer.'
+], function () {
+    Route::group(['middleware' => ['role:developer', 'auth']], function () {
+        route::get('/', [\App\Http\Controllers\Developer\DashboardController::class, 'index'])->name('index');
+    });
+});
+
+
+
 require __DIR__.'/auth.php';
