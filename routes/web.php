@@ -42,17 +42,26 @@ Route::group([
     'as' => 'admin.'
 ], function () {
     Route::group(['middleware' => ['role:admin', 'auth']], function () {
-        route::get('/', [\App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('index');
+        Route::get('/', [\App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('index');
     });
 });
 
 Route::group([
-    'prefix' => 'developer',
-    'namespace' => 'Developer',
-    'as' => 'developer.'
+    'prefix' => 'user',
+    'namespace' => 'User',
+    'as' => 'user.'
 ], function () {
     Route::group(['middleware' => ['role:developer', 'auth']], function () {
-        route::get('/', [\App\Http\Controllers\Developer\DashboardController::class, 'index'])->name('index');
+        route::get('/', [\App\Http\Controllers\User\DashboardController::class, 'index'])->name('index');
+        Route::group([
+            'prefix' => 'project',
+            'namespace' => 'Project',
+            'as' => 'project.'
+        ], function () {
+            Route::get('board', function () {
+                return Inertia::render('Board');
+            });
+        });
     });
 });
 
