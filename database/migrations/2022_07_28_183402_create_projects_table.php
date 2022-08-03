@@ -22,6 +22,7 @@ class CreateProjectsTable extends Migration
             $table->enum('status', array('Passive','Running', 'Finished'))->default('Running');
             //$table->tinyInteger('status')->default(1);
             $table->integer('user_id')->unsigned();
+//            $table->integer('task_is')->unsigned();
             $table->timestamps();
         });
     }
