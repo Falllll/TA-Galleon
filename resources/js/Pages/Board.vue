@@ -1,15 +1,14 @@
 <script setup>
 import {DotsHorizontalIcon, PencilIcon, PlusIcon} from "@heroicons/vue/solid";
 </script>
-<script src="{{ mix('js/bundle.js') }}"></script>
 <template>
   <div class="flex flex-col h-screen bg-blue-600">
     <header class="shrink-0 flex justify-between bg-white px-4 py-3">
-      <a class="text-2xl font-black tracking-tight" href="/">kanboard</a>
+      <a class="text-2xl font-black tracking-tight" href="{{route('user.index')}}">kanboard</a>
       <nav>
         <a class="text-sm font-medium px-3 py-2 rounded-md hover:bg-gray-100" href="#">My boards</a>
         <button class="ml-3">
-<!--          <img class="h-9 w-9 inline rounded-full" src="https://pbs.twimg.com/profile_images/1333896976602193922/MtWztkxt_400x400.jpg" alt="">-->
+          <img class="h-9 w-9 inline rounded-full" src="{{asset('img/profile/profile-1.jpg')}}" alt="">
         </button>
       </nav>
     </header>

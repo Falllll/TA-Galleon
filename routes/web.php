@@ -34,7 +34,7 @@ Route::post('/contact-form', [HomeController::class, 'contact'])->name('contact.
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+})->name('dashboard');
 
 Route::group([
     'prefix' => 'admin',
@@ -58,9 +58,7 @@ Route::group([
             'namespace' => 'Project',
             'as' => 'project.'
         ], function () {
-            Route::get('board', function () {
-                return Inertia::render('Board');
-            });
+            Route::resource('board', BoardController::class);
         });
     });
 });

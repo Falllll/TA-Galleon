@@ -21774,7 +21774,7 @@ var _hoisted_1 = {
   "class": "flex flex-col h-screen bg-blue-600"
 };
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<header class=\"shrink-0 flex justify-between bg-white px-4 py-3\"><a class=\"text-2xl font-black tracking-tight\" href=\"/\">kanboard</a><nav><a class=\"text-sm font-medium px-3 py-2 rounded-md hover:bg-gray-100\" href=\"#\">My boards</a><button class=\"ml-3\"><img class=\"h-9 w-9 inline rounded-full\" src=\"https://pbs.twimg.com/profile_images/1333896976602193922/MtWztkxt_400x400.jpg\" alt=\"\"></button></nav></header>", 1);
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<header class=\"shrink-0 flex justify-between bg-white px-4 py-3\"><a class=\"text-2xl font-black tracking-tight\" href=\"{{route(&#39;user.index&#39;)}}\">kanboard</a><nav><a class=\"text-sm font-medium px-3 py-2 rounded-md hover:bg-gray-100\" href=\"#\">My boards</a><button class=\"ml-3\"><img class=\"h-9 w-9 inline rounded-full\" src=\"{{asset(&#39;img/profile/profile-1.jpg&#39;)}}\" alt=\"\"></button></nav></header>", 1);
 
 var _hoisted_3 = {
   "class": "flex-1 overflow-hidden"
