@@ -1,14 +1,13 @@
 <script setup>
 import {Link} from '@inertiajs/inertia-vue3';
 import {Menu, MenuButton, MenuItem, MenuItems} from '@headlessui/vue';
-import NavLink from '@/Components/NavLink';
-</script>
+import NavLink from '@/Components/NavLink';</script>
 
 <template>
   <div>
     <div class="flex flex-col h-screen">
-      <nav class="shrink-0 flex justify-between bg-white px-4 py-3">
-        <a :href="route('dashboard')" class="text-2xl font-black tracking-tight">kanboard</a>
+      <nav class="shrink-0 flex justify-between bg-white px-4 py-3 border-b">
+        <a :href="route('boards')" class="text-2xl font-black tracking-tight">kanboard</a>
         <div class="flex items-center">
           <NavLink href="#">My boards</NavLink>
 

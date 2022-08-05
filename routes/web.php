@@ -33,7 +33,7 @@ Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::post('/contact-form', [HomeController::class, 'contact'])->name('contact.store');
 
 Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
+    return Inertia::render('Boards');
 })->name('dashboard');
 
 Route::group([
@@ -53,6 +53,7 @@ Route::group([
 ], function () {
     Route::group(['middleware' => ['role:developer', 'auth']], function () {
         route::get('/', [\App\Http\Controllers\User\DashboardController::class, 'index'])->name('index');
+        route::resource('boards', BoardsController::class);
         Route::group([
             'prefix' => 'project',
             'namespace' => 'Project',
