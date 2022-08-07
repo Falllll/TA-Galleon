@@ -32,15 +32,15 @@ class HandleInertiaRequests extends Middleware
      * @param  \Illuminate\Http\Request  $request
      * @return array
      */
-    public function share(Request $request)
-    {
-        return array_merge(parent::share($request), [
-            'auth' => [
-                'user' => $request->user()?->only(['id', 'name', 'avatar_url']),
-            ],
-            'ziggy' => function () {
-                return (new Ziggy)->toArray();
-            },
-        ]);
-    }
+//    public function share(Request $request)
+//    {
+//        return array_merge(parent::share($request), [
+//            'auth' => [
+//                'user' => $request->user()?->only(['id', 'name', 'avatar_url']),
+//            ],
+//            'ziggy' => function () {
+//                return (new Ziggy)->toArray();
+//            },
+//        ]);
+//    }
 }
