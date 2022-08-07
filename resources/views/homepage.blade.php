@@ -100,7 +100,7 @@
           Management
           <br class="hidden lg:block"> Manage Your Project By Easy Way.</h2>
         <div class="text-center mb-10 wow fadeInUp" data-wow-delay="1.2s">
-          <a href="{{route('user.index')}}"
+           <a href="{{route('user.index')}}"
              rel="nofollow"
              class="btn">Start Project Now</a>
         </div>

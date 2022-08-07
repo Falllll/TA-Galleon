@@ -33,8 +33,13 @@ Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::post('/contact-form', [HomeController::class, 'contact'])->name('contact.store');
 
 Route::get('/dashboard', function () {
+<<<<<<< HEAD
     return Inertia::render('Boards');
 })->name('dashboard');
+=======
+    return Inertia::render('Dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+>>>>>>> parent of 8353b12 (board)
 
 Route::group([
     'prefix' => 'admin',
@@ -59,7 +64,9 @@ Route::group([
             'namespace' => 'Project',
             'as' => 'project.'
         ], function () {
-            Route::resource('board', BoardController::class);
+            Route::get('board', function () {
+                return Inertia::render('Board');
+            });
         });
     });
 });

@@ -8,7 +8,9 @@ const props = defineProps({
   board: Object
 });
 </script>
+<script src="{{ mix('js/bundle.js') }}"></script>
 <template>
+<<<<<<< HEAD
   <Authenticated>
     <div class="flex flex-col h-full bg-blue-600">
       <div class="shrink-0 flex flex-wrap justify-between items-center p-4">
@@ -18,6 +20,29 @@ const props = defineProps({
             <DotsHorizontalIcon class="w-5 h-5"/>
             <span class="ml-1">Settings</span>
           </button>
+=======
+  <div class="flex flex-col h-screen bg-blue-600">
+    <header class="shrink-0 flex justify-between bg-white px-4 py-3">
+      <a class="text-2xl font-black tracking-tight" href="/">kanboard</a>
+      <nav>
+        <a class="text-sm font-medium px-3 py-2 rounded-md hover:bg-gray-100" href="#">My boards</a>
+        <button class="ml-3">
+<!--          <img class="h-9 w-9 inline rounded-full" src="https://pbs.twimg.com/profile_images/1333896976602193922/MtWztkxt_400x400.jpg" alt="">-->
+        </button>
+      </nav>
+    </header>
+
+    <main class="flex-1 overflow-hidden">
+      <div class="flex flex-col h-full">
+        <div class="shrink-0 flex justify-between items-center p-4">
+          <h1 class="text-2xl text-white font-bold">Board title</h1>
+          <div>
+            <button class="inline-flex items-center bg-white/10 hover:bg-white/20 px-3 py-2 font-medium text-sm text-white rounded-md">
+              <DotsHorizontalIcon class="w-5 h-5"/>
+              <span class="ml-1">Settings</span>
+            </button>
+          </div>
+>>>>>>> parent of 8353b12 (board)
         </div>
       </div>
       <div class="flex-1 overflow-x-auto">
