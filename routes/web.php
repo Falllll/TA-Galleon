@@ -33,8 +33,8 @@ Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::post('/contact-form', [HomeController::class, 'contact'])->name('contact.store');
 
 Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+    return Inertia::render('Boards');
+})->name('dashboard');
 
 Route::group([
     'prefix' => 'admin',
@@ -42,17 +42,25 @@ Route::group([
     'as' => 'admin.'
 ], function () {
     Route::group(['middleware' => ['role:admin', 'auth']], function () {
-        route::get('/', [\App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('index');
+        Route::get('/', [\App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('index');
     });
 });
 
 Route::group([
-    'prefix' => 'developer',
-    'namespace' => 'Developer',
-    'as' => 'developer.'
+    'prefix' => 'user',
+    'namespace' => 'User',
+    'as' => 'user.'
 ], function () {
     Route::group(['middleware' => ['role:developer', 'auth']], function () {
-        route::get('/', [\App\Http\Controllers\Developer\DashboardController::class, 'index'])->name('index');
+        route::get('/', [\App\Http\Controllers\User\DashboardController::class, 'index'])->name('index');
+        route::resource('boards', BoardsController::class);
+        Route::group([
+            'prefix' => 'project',
+            'namespace' => 'Project',
+            'as' => 'project.'
+        ], function () {
+            Route::resource('board', BoardController::class);
+        });
     });
 });
 
