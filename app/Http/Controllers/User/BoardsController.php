@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
+
 class BoardsController extends Controller
 {
     /**
@@ -36,9 +37,18 @@ class BoardsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+     public function store()
     {
-        //
+        request()->validate([
+            'name' => ['required']
+        ]);
+
+        Board::create([
+            'user_id' => auth()->id(),
+            'name' => request('name')
+        ]);
+
+        return redirect()->back();
     }
 
     /**
@@ -72,7 +82,13 @@ class BoardsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        request()->validate([
+            'name' => ['required', 'max:255']
+        ]);
+
+        $board->update(['name' => request('name')]);
+
+        return redirect()->back();
     }
 
     /**

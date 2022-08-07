@@ -7,6 +7,7 @@ module.exports = {
         './resources/views/**/*.blade.php',
         './resources/js/**/*.vue',
     ],
+  devtool: '#eval-source-map',
 
     theme: {
         extend: {
