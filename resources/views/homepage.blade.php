@@ -1,155 +1,167 @@
 <!DOCTYPE html>
 <html lang="en" style="scroll-behavior: smooth;">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!--====== Favicon Icon ======-->
+  <!--====== Favicon Icon ======-->
 
 
-    <title>{{ config('app.name', 'Galleon') }}</title>
+  <title>{{ config('app.name', 'Galleon') }}</title>
 
-    <!-- Icon -->
-    <link rel="stylesheet" type="text/css" href="landing/css/LineIcons.2.0.css">
-    <!-- Animate -->
-    <link rel="stylesheet" type="text/css" href="landing/css/animate.css">
-    <!-- Tiny Slider  -->
-    <link rel="stylesheet" type="text/css" href="landing/css/tiny-slider.css">
-    <!-- Tailwind css -->
-    <link rel="stylesheet" type="text/css" href="landing/css/tailwind.css">
-  </head>
-  <body>
+  <!-- Icon -->
+  <link rel="stylesheet" type="text/css" href="landing/css/LineIcons.2.0.css">
+  <!-- Animate -->
+  <link rel="stylesheet" type="text/css" href="landing/css/animate.css">
+  <!-- Tiny Slider  -->
+  <link rel="stylesheet" type="text/css" href="landing/css/tiny-slider.css">
+  <!-- Tailwind css -->
+  <link rel="stylesheet" type="text/css" href="landing/css/tailwind.css">
+</head>
+<body>
 
-    <!-- Header Area wrapper Starts -->
-    <header id="header-wrap" class="relative">
-      <!-- Navbar Start -->
-      <div class="fixed top-0 left-0 w-full z-30 duration-300">
-          <div class="container">
-              <nav class="navbar py-2 navbar-expand-lg flex justify-between items-center relative duration-300">
-                  <button class="navbar-toggler focus:outline-none block lg:hidden" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="toggler-icon"></span>
-                      <span class="toggler-icon"></span>
-                      <span class="toggler-icon"></span>
-                  </button>
+<!-- Header Area wrapper Starts -->
+<header id="header-wrap" class="relative">
+  <!-- Navbar Start -->
+  <div class="fixed top-0 left-0 w-full z-30 duration-300">
+    <div class="container">
+      <nav class="navbar py-2 navbar-expand-lg flex justify-between items-center relative duration-300">
+        <button class="navbar-toggler focus:outline-none block lg:hidden" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+          <span class="toggler-icon"></span>
+          <span class="toggler-icon"></span>
+          <span class="toggler-icon"></span>
+        </button>
 
-                  <div class="collapse navbar-collapse hidden lg:block duration-300 shadow bg-white absolute top-100 left-0 mt-full z-20 px-5 py-3 w-full lg:static lg:bg-transparent lg:shadow-none" id="navbarSupportedContent">
-                      <ul class="navbar-nav mr-auto justify-center items-center lg:flex">
-                          <li class="nav-item">
-                            <a class="page-scroll active" href="#hero-area">Home</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="page-scroll" href="#services">Services</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="page-scroll" href="#feature">feature</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="page-scroll" href="#testimonial">Testimonial</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="page-scroll" href="#pricing">Pricing</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="page-scroll" href="#contact">Contact</a>
-                          </li>
-                      </ul>
-                  </div>
+        <div
+          class="collapse navbar-collapse hidden lg:block duration-300 shadow bg-white absolute top-100 left-0 mt-full z-20 px-5 py-3 w-full lg:static lg:bg-transparent lg:shadow-none"
+          id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto justify-center items-center lg:flex">
+            <li class="nav-item">
+              <a class="page-scroll active" href="#hero-area">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="page-scroll" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="page-scroll" href="#feature">feature</a>
+            </li>
+            <li class="nav-item">
+              <a class="page-scroll" href="#testimonial">Testimonial</a>
+            </li>
+            <li class="nav-item">
+              <a class="page-scroll" href="#pricing">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="page-scroll" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
 
-                  @if (Route::has('login'))
-                      @auth
-                          <form action="{{ route('logout') }}" method="POST">
-                            @csrf
-                                <button class="text-blue-600 border border-blue-600 px-10 py-3 rounded-full duration-300 hover:bg-blue-600 hover:text-white">Logout</button>
-                          </form>
-                      @else
-                      <div class="header-btn hidden sm:block sm:absolute sm:right-0 sm:mr-16 lg:static lg:mr-0">
-                        <a class="text-blue-600 border border-blue-600 px-10 py-3 rounded-full duration-300 hover:bg-blue-600 hover:text-white" href="{{ route('login') }}">Login</a>
-                      </div>
-                      @if (Route::has('register'))
-                      <div class="header-btn hidden sm:block sm:absolute sm:right-0 sm:mr-16 lg:static lg:mr-0">
-                        <a class="text-white border bg-blue-600 border-blue-600 px-10 py-3 rounded-full duration-300 hover:bg-white hover:text-white"  href="{{ route('register') }}">Register</a>
-                      </div>
-                          @endif
-                      @endauth
-                         @endif
-              </nav>
-          </div>
-      </div>
-      <!-- Navbar End -->
-    </header>
-    <!-- Header Area wrapper End -->
-
-    <!-- Hero Area Start -->
-    <section id="hero-area" class="bg-blue-100 pt-48 pb-10">
-      <div class="container">
-        <div class="flex justify-between">
-          <div class="w-full text-center">
-            <h2 class="text-4xl font-bold leading-snug text-gray-700 mb-10 wow fadeInUp" data-wow-delay="1s">Project Management
-              <br class="hidden lg:block"> Manage Your Project By Easy Way.</h2>
-            <div class="text-center mb-10 wow fadeInUp" data-wow-delay="1.2s">
-              <a href="{{route('developer.index')}}"
-                rel="nofollow"
-                class="btn">Start Project Now</a>
+        @if (Route::has('login'))
+          @auth
+            <form action="{{ route('logout') }}" method="POST">
+              @csrf
+              <button
+                class="text-blue-600 border border-blue-600 px-10 py-3 rounded-full duration-300 hover:bg-blue-600 hover:text-white">
+                Logout
+              </button>
+            </form>
+          @else
+            <div class="header-btn hidden sm:block sm:absolute sm:right-0 sm:mr-16 lg:static lg:mr-0">
+              <a
+                class="text-blue-600 border border-blue-600 px-10 py-3 rounded-full duration-300 hover:bg-blue-600 hover:text-white"
+                href="{{ route('login') }}">Login</a>
             </div>
-            <div class="text-center wow fadeInUp" data-wow-delay="1.6s">
-              <img class="img-fluid mx-auto" src="landing/img/hero.svg" alt="">
-            </div>
-          </div>
+            @if (Route::has('register'))
+              <div class="header-btn hidden sm:block sm:absolute sm:right-0 sm:mr-16 lg:static lg:mr-0">
+                <a
+                  class="text-white border bg-blue-600 border-blue-600 px-10 py-3 rounded-full duration-300 hover:bg-white hover:text-white"
+                  href="{{ route('register') }}">Register</a>
+              </div>
+            @endif
+          @endauth
+        @endif
+      </nav>
+    </div>
+  </div>
+  <!-- Navbar End -->
+</header>
+<!-- Header Area wrapper End -->
+
+<!-- Hero Area Start -->
+<section id="hero-area" class="bg-blue-100 pt-48 pb-10">
+  <div class="container">
+    <div class="flex justify-between">
+      <div class="w-full text-center">
+        <h2 class="text-4xl font-bold leading-snug text-gray-700 mb-10 wow fadeInUp" data-wow-delay="1s">Project
+          Management
+          <br class="hidden lg:block"> Manage Your Project By Easy Way.</h2>
+        <div class="text-center mb-10 wow fadeInUp" data-wow-delay="1.2s">
+          <a href="{{route('developer.index')}}"
+             rel="nofollow"
+             class="btn">Start Project Now</a>
+        </div>
+        <div class="text-center wow fadeInUp" data-wow-delay="1.6s">
+          <img class="img-fluid mx-auto" src="landing/img/hero.svg" alt="">
         </div>
       </div>
-    </section>
-    <!-- Hero Area End -->
+    </div>
+  </div>
+</section>
+<!-- Hero Area End -->
 
-        <!-- Services Section Start -->
-    <section id="services" class="py-24">
-      <div class="container">
-        <div class="text-center">
-          <h2 class="mb-12 section-heading wow fadeInDown" data-wow-delay="0.3s">Our Services</h2>
-        </div>
-        <div class="flex flex-wrap">
-          <!-- Services item -->
-          <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/2">
-            <div class="m-4 wow fadeInRight" data-wow-delay="0.3s">
-              <div>
-                  <ul>
-                      <li>
+<!-- Services Section Start -->
+<section id="services" class="py-24">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="mb-12 section-heading wow fadeInDown" data-wow-delay="0.3s">Our Services</h2>
+    </div>
+    <div class="flex flex-wrap">
+      <!-- Services item -->
+      <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/2">
+        <div class="m-4 wow fadeInRight" data-wow-delay="0.3s">
+          <div>
+            <ul>
+              <li>
                           <span class="text-2xl font-bold">
                             Manage your projects intuitively,
                           </span>
-                          <span class="text-xl font-medium ">
+                <span class="text-xl font-medium ">
                             With out leaving your creative flow.
                           </span>
-                      </li>
-                      <li class="leading-9 my-3">
+              </li>
+              <li class="leading-9 my-3">
                           <span>
                             Everyone know that admin work is the most productive thing we all do
                           </span>
-                      </li>
-                      <li class="mb-3">
+              </li>
+              <li class="mb-3">
                           <span>
                             No wait, that doesn't sound right. So why do we let project management add much extra time to our work?
                           </span>
-                      </li>
-                      <li>
+              </li>
+              <li>
                           <span>
                             PM has reimagined project management from the ground up to make it more intuitve for taems.Instead of distracting you from your creative work, We'll help you focus on getting things done saving you time.
                           </span>
-                      </li>
-                  </ul>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
-          <!-- Services item -->
-          <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/6">
-              <img src="{{asset('landing/img/features.gif')}}">
-          </div>
-
-
         </div>
       </div>
-    </section>
-    <!-- Services Section End -->
+      <!-- Services item -->
+      <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/6">
+        <img src="{{asset('landing/img/features.gif')}}">
+      </div>
+
+
+    </div>
+  </div>
+</section>
+<!-- Services Section End -->
 
 {{--    <!-- Services Section Start -->--}}
 {{--    <section id="services" class="py-24">--}}
@@ -242,71 +254,75 @@
 {{--    <!-- Services Section End -->--}}
 
 
-    <!-- Feature Section Start -->
-    <div id="feature" class="bg-blue-100 py-24">
-      <div class="container">
-        <div class="flex flex-wrap items-center">
-          <div class="w-full lg:w-1/2">
-            <div class="mb-5 lg:mb-0">
-              <h2 class="mb-12 section-heading wow fadeInDown" data-wow-delay="0.3s">What can you do on PM</h2>
+<!-- Feature Section Start -->
+<div id="feature" class="bg-blue-100 py-24">
+  <div class="container">
+    <div class="flex flex-wrap items-center">
+      <div class="w-full lg:w-1/2">
+        <div class="mb-5 lg:mb-0">
+          <h2 class="mb-12 section-heading wow fadeInDown" data-wow-delay="0.3s">What can you do on PM</h2>
 
-              <div class="flex flex-wrap">
-                <div class="w-full sm:w-1/2 lg:w-1/2">
-                  <div class="m-3">
-                    <div class="icon text-4xl">
-                      <i class="lni lni-dollar"></i>
-                    </div>
-                    <div class="features-content">
-                      <h4 class="feature-title">Budget</h4>
-                      <p> Thousands of themes means there’s a layout that’s just right for you, while storage and design options ensure you can upload anything you need to and give your work the stage it deserves.</p>
-                    </div>
-                  </div>
+          <div class="flex flex-wrap">
+            <div class="w-full sm:w-1/2 lg:w-1/2">
+              <div class="m-3">
+                <div class="icon text-4xl">
+                  <i class="lni lni-dollar"></i>
                 </div>
-                <div class="w-full sm:w-1/2 lg:w-1/2">
-                  <div class="m-3">
-                    <div class="icon text-4xl">
-                      <i class="lni lni-list"></i>
-                    </div>
-                    <div class="features-content">
-                      <h4 class="feature-title">Task</h4>
-                      <p> Thousands of themes means there’s a layout that’s just right for you, while storage and design options ensure you can upload anything you need to and give your work the stage it deserves.</p>
-                    </div>
-                  </div>
+                <div class="features-content">
+                  <h4 class="feature-title">Budget</h4>
+                  <p> Thousands of themes means there’s a layout that’s just right for you, while storage and design
+                    options ensure you can upload anything you need to and give your work the stage it deserves.</p>
                 </div>
-                <div class="w-full sm:w-1/2 lg:w-1/2">
-                  <div class="m-3">
-                    <div class="icon text-4xl">
-                      <i class="lni lni-timer"></i>
-                    </div>
-                    <div class="features-content">
-                      <h4 class="feature-title">Time</h4>
-                      <p> Thousands of themes means there’s a layout that’s just right for you, while storage and design options ensure you can upload anything you need to and give your work the stage it deserves.</p>
-                    </div>
-                  </div>
+              </div>
+            </div>
+            <div class="w-full sm:w-1/2 lg:w-1/2">
+              <div class="m-3">
+                <div class="icon text-4xl">
+                  <i class="lni lni-list"></i>
                 </div>
-                <div class="w-full sm:w-1/2 lg:w-1/2">
-                  <div class="m-3">
-                    <div class="icon text-4xl">
-                      <i class="lni lni-consulting"></i>
-                    </div>
-                    <div class="features-content">
-                      <h4 class="feature-title">Employees</h4>
-                      <p> Thousands of themes means there’s a layout that’s just right for you, while storage and design options ensure you can upload anything you need to and give your work the stage it deserves.</p>
-                    </div>
-                  </div>
+                <div class="features-content">
+                  <h4 class="feature-title">Task</h4>
+                  <p> Thousands of themes means there’s a layout that’s just right for you, while storage and design
+                    options ensure you can upload anything you need to and give your work the stage it deserves.</p>
+                </div>
+              </div>
+            </div>
+            <div class="w-full sm:w-1/2 lg:w-1/2">
+              <div class="m-3">
+                <div class="icon text-4xl">
+                  <i class="lni lni-timer"></i>
+                </div>
+                <div class="features-content">
+                  <h4 class="feature-title">Time</h4>
+                  <p> Thousands of themes means there’s a layout that’s just right for you, while storage and design
+                    options ensure you can upload anything you need to and give your work the stage it deserves.</p>
+                </div>
+              </div>
+            </div>
+            <div class="w-full sm:w-1/2 lg:w-1/2">
+              <div class="m-3">
+                <div class="icon text-4xl">
+                  <i class="lni lni-consulting"></i>
+                </div>
+                <div class="features-content">
+                  <h4 class="feature-title">Employees</h4>
+                  <p> Thousands of themes means there’s a layout that’s just right for you, while storage and design
+                    options ensure you can upload anything you need to and give your work the stage it deserves.</p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="w-full lg:w-1/2">
-            <div class="mx-3 lg:mr-0 lg:ml-3 wow fadeInRight" data-wow-delay="0.3s">
-              <img src="landing/img/feature/img-1.svg" alt="">
-            </div>
-          </div>
+        </div>
+      </div>
+      <div class="w-full lg:w-1/2">
+        <div class="mx-3 lg:mr-0 lg:ml-3 wow fadeInRight" data-wow-delay="0.3s">
+          <img src="landing/img/feature/img-1.svg" alt="">
         </div>
       </div>
     </div>
-    <!-- Feature Section End -->
+  </div>
+</div>
+<!-- Feature Section End -->
 
 {{--    <!-- Team Section Start -->--}}
 {{--    <section id="team" class="py-24 text-center">--}}
@@ -449,173 +465,181 @@
 {{--    </div>--}}
 {{--    <!-- Clients Section End -->--}}
 
-    <!-- Testimonial Section Start -->
-    <section id="testimonial" class="py-24 bg-gray-800">
-      <div class="container">
-        <div class="flex justify-center mx-3">
-          <div class="w-full lg:w-7/12">
-            <div id="testimonials" class="testimonials">
-              <!-- testimonial item start -->
-              <div class="item focus:outline-none">
-                <div class="text-center py-10 px-8 md:px-10 rounded border border-gray-900">
-                  <div class="text-center">
-                    <p class="text-gray-600 leading-loose">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo fuga illo iste magnam nemo obcaecati quae quos rem tempora veniam. Consequatur tempora tempore velit! Aperiam assumenda consequuntur dolorem odio quae.</p>
-                  </div>
-                  <div class="my-3 mx-auto w-24 h-24 shadow-md rounded-full">
-                    <img class="rounded-full p-2 w-full" src="landing/img/testimonial/img1.jpg" alt="">
-                  </div>
-                  <div class="mb-2">
-                    <h2 class="font-bold text-lg uppercase text-blue-600 mb-2">Fajar</h2>
-                    <h3 class="font-medium text-white text-sm">Euphoriya</h3>
-                  </div>
-                </div>
+<!-- Testimonial Section Start -->
+<section id="testimonial" class="py-24 bg-gray-800">
+  <div class="container">
+    <div class="flex justify-center mx-3">
+      <div class="w-full lg:w-7/12">
+        <div id="testimonials" class="testimonials">
+          <!-- testimonial item start -->
+          <div class="item focus:outline-none">
+            <div class="text-center py-10 px-8 md:px-10 rounded border border-gray-900">
+              <div class="text-center">
+                <p class="text-gray-600 leading-loose">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Explicabo fuga illo iste magnam nemo obcaecati quae quos rem tempora veniam. Consequatur tempora
+                  tempore velit! Aperiam assumenda consequuntur dolorem odio quae.</p>
               </div>
-              <!-- testimonial item end -->
-              <!-- testimonial item start -->
-              <div class="item focus:outline-none">
-                <div class="text-center py-10 px-8 md:px-10 rounded border border-gray-900">
-                  <div class="text-center">
-                    <p class="text-gray-600 leading-loose">Holisticly empower leveraged ROI whereas effective web-readiness. Completely enable emerging meta-services with cross-platform web services. Quickly initiate inexpensive total linkage rather than extensible scenarios. Holisticly empower leveraged ROI whereas effective web-readiness. </p>
-                  </div>
-                  <div class="my-3 mx-auto w-24 h-24 shadow-md rounded-full">
-                    <img class="rounded-full p-2 w-full" src="landing/img/testimonial/img2.jpg" alt="">
-                  </div>
-                  <div class="mb-2">
-                    <h2 class="font-bold text-lg uppercase text-blue-600 mb-2">Mila</h2>
-                    <h3 class="font-medium text-white text-sm">PageBulb</h3>
-                  </div>
-                </div>
+              <div class="my-3 mx-auto w-24 h-24 shadow-md rounded-full">
+                <img class="rounded-full p-2 w-full" src="landing/img/testimonial/img1.jpg" alt="">
               </div>
-              <!-- testimonial item end -->
-              <!-- testimonial item start -->
-              <div class="item focus:outline-none">
-                <div class="text-center py-10 px-8 md:px-10 rounded border border-gray-900">
-                  <div class="text-center">
-                    <p class="text-gray-600 leading-loose">Holisticly empower leveraged ROI whereas effective web-readiness. Completely enable emerging meta-services with cross-platform web services. Quickly initiate inexpensive total linkage rather than extensible scenarios. Holisticly empower leveraged ROI whereas effective web-readiness. </p>
-                  </div>
-                  <div class="my-3 mx-auto w-24 h-24 shadow-md rounded-full">
-                    <img class="rounded-full p-2 w-full" src="landing/img/testimonial/img1.jpg" alt="">
-                  </div>
-                  <div class="mb-2">
-                    <h2 class="font-bold text-lg uppercase text-blue-600 mb-2">Rob</h2>
-                    <h3 class="font-medium text-white text-sm">OnePageLove</h3>
-                  </div>
-                </div>
+              <div class="mb-2">
+                <h2 class="font-bold text-lg uppercase text-blue-600 mb-2">Fajar</h2>
+                <h3 class="font-medium text-white text-sm">Euphoriya</h3>
               </div>
-              <!-- testimonial item end -->
-
             </div>
+          </div>
+          <!-- testimonial item end -->
+          <!-- testimonial item start -->
+          <div class="item focus:outline-none">
+            <div class="text-center py-10 px-8 md:px-10 rounded border border-gray-900">
+              <div class="text-center">
+                <p class="text-gray-600 leading-loose">Holisticly empower leveraged ROI whereas effective web-readiness.
+                  Completely enable emerging meta-services with cross-platform web services. Quickly initiate
+                  inexpensive total linkage rather than extensible scenarios. Holisticly empower leveraged ROI whereas
+                  effective web-readiness. </p>
+              </div>
+              <div class="my-3 mx-auto w-24 h-24 shadow-md rounded-full">
+                <img class="rounded-full p-2 w-full" src="landing/img/testimonial/img2.jpg" alt="">
+              </div>
+              <div class="mb-2">
+                <h2 class="font-bold text-lg uppercase text-blue-600 mb-2">Mila</h2>
+                <h3 class="font-medium text-white text-sm">PageBulb</h3>
+              </div>
+            </div>
+          </div>
+          <!-- testimonial item end -->
+          <!-- testimonial item start -->
+          <div class="item focus:outline-none">
+            <div class="text-center py-10 px-8 md:px-10 rounded border border-gray-900">
+              <div class="text-center">
+                <p class="text-gray-600 leading-loose">Holisticly empower leveraged ROI whereas effective web-readiness.
+                  Completely enable emerging meta-services with cross-platform web services. Quickly initiate
+                  inexpensive total linkage rather than extensible scenarios. Holisticly empower leveraged ROI whereas
+                  effective web-readiness. </p>
+              </div>
+              <div class="my-3 mx-auto w-24 h-24 shadow-md rounded-full">
+                <img class="rounded-full p-2 w-full" src="landing/img/testimonial/img1.jpg" alt="">
+              </div>
+              <div class="mb-2">
+                <h2 class="font-bold text-lg uppercase text-blue-600 mb-2">Rob</h2>
+                <h3 class="font-medium text-white text-sm">OnePageLove</h3>
+              </div>
+            </div>
+          </div>
+          <!-- testimonial item end -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Testimonial Section End -->
+
+<!-- Pricing section Start -->
+<section id="pricing" class="py-24">
+  <div class="container">
+    <div class="flex flex-wrap justify-center md:justify-start">
+      <!-- single pricing table starts -->
+      <div class="w-3/4 sm:w-2/3 md:w-1/2 lg:w-1/3">
+        <div class="pricing-box wow fadeInLeft" data-wow-delay="1.2s">
+          <div class="mb-3">
+            <h3 class="package-name">Basic</h3>
+          </div>
+          <div class="mb-5">
+            <p class="text-gray-700">
+              <span class="font-bold text-2xl">$12.90</span>
+              <span class="font-medium text-sm">/ Month</span>
+            </p>
+          </div>
+          <ul class="mb-16">
+            <li class="text-gray-500 leading-9">Up to 5 projects</li>
+            <li class="text-gray-500 leading-9">Up to 10 collabrators</li>
+            <li class="text-gray-500 leading-9">2gb of storage</li>
+          </ul>
+          <a href="#" class="btn">Get It</a>
+        </div>
+      </div>
+      <!-- single pricing table ends -->
+      <!-- single pricing table starts -->
+      <div class="w-3/4 sm:w-2/3 md:w-1/2 lg:w-1/3">
+        <div class="pricing-box bg-blue-100 wow fadeInLeft" data-wow-delay="1.2s">
+          <div class="mb-3">
+            <h3 class="package-name">PROFESIONAL</h3>
+          </div>
+          <div class="mb-5">
+            <p class="text-gray-700">
+              <span class="font-bold text-2xl">$49.90</span>
+              <span class="font-medium text-sm">/ Month</span>
+            </p>
+          </div>
+          <ul class="mb-16">
+            <li class="text-gray-500 leading-9">Up to 10 projects</li>
+            <li class="text-gray-500 leading-9">Up to 20 collabrators</li>
+            <li class="text-gray-500 leading-9">10gb of storage</li>
+            <li class="text-gray-500 leading-9">Real-time collabration</li>
+          </ul>
+          <a href="#" class="btn">Get It</a>
+        </div>
+      </div>
+      <!-- single pricing table ends -->
+      <!-- single pricing table starts -->
+      <div class="w-3/4 sm:w-2/3 md:w-1/2 lg:w-1/3">
+        <div class="pricing-box">
+          <div class="mb-3">
+            <h3 class="package-name">EXPERT</h3>
+          </div>
+          <div class="mb-5">
+            <p class="text-gray-700">
+              <span class="font-bold text-2xl">$89.90</span>
+              <span class="font-medium text-sm">/ Month</span>
+            </p>
+          </div>
+          <ul class="mb-16">
+            <li class="text-gray-500 leading-9">unlimited projects</li>
+            <li class="text-gray-500 leading-9">Unlimited collabrators</li>
+            <li class="text-gray-500 leading-9">Unlimited of storage</li>
+            <li class="text-gray-500 leading-9">Real-time collabration</li>
+            <li class="text-gray-500 leading-9">24x7 Support</li>
+          </ul>
+          <a href="#" class="btn">Get It</a>
+        </div>
+      </div>
+      <!-- single pricing table ends -->
+    </div>
+  </div>
+</section>
+<!-- Pricing Table Section End -->
+
+<!-- carousel-area Section Start -->
+<section class="carousel-area bg-gray-800 py-32">
+  <div class="container">
+    <div class="flex">
+      <div class="w-full relative">
+        <div class="portfolio-carousel">
+          <div>
+            <img class="w-full" src="landing/img/slide/img1.jpg" alt="">
+          </div>
+          <div>
+            <img class="w-full" src="landing/img/slide/img2.jpg" alt="">
+          </div>
+          <div>
+            <img class="w-full" src="landing/img/slide/img3.jpg" alt="">
+          </div>
+          <div>
+            <img class="w-full" src="landing/img/slide/img4.jpg" alt="">
+          </div>
+          <div>
+            <img class="w-full" src="landing/img/slide/img5.jpg" alt="">
+          </div>
+          <div>
+            <img class="w-full" src="landing/img/slide/img6.jpg" alt="">
           </div>
         </div>
       </div>
-    </section>
-    <!-- Testimonial Section End -->
-
-    <!-- Pricing section Start -->
-    <section id="pricing" class="py-24">
-      <div class="container">
-        <div class="flex flex-wrap justify-center md:justify-start">
-          <!-- single pricing table starts -->
-          <div class="w-3/4 sm:w-2/3 md:w-1/2 lg:w-1/3">
-            <div class="pricing-box wow fadeInLeft" data-wow-delay="1.2s">
-              <div class="mb-3">
-                <h3 class="package-name">Basic</h3>
-              </div>
-              <div class="mb-5">
-                <p class="text-gray-700">
-                  <span class="font-bold text-2xl">$12.90</span>
-                  <span class="font-medium text-sm">/ Month</span>
-                </p>
-              </div>
-              <ul class="mb-16">
-                <li class="text-gray-500 leading-9">Up to 5 projects </li>
-                <li class="text-gray-500 leading-9">Up to 10 collabrators</li>
-                <li class="text-gray-500 leading-9">2gb of storage</li>
-              </ul>
-              <a href="#" class="btn">Get It</a>
-            </div>
-          </div>
-          <!-- single pricing table ends -->
-          <!-- single pricing table starts -->
-          <div class="w-3/4 sm:w-2/3 md:w-1/2 lg:w-1/3">
-            <div class="pricing-box bg-blue-100 wow fadeInLeft" data-wow-delay="1.2s">
-              <div class="mb-3">
-                <h3 class="package-name">PROFESIONAL</h3>
-              </div>
-              <div class="mb-5">
-                <p class="text-gray-700">
-                  <span class="font-bold text-2xl">$49.90</span>
-                  <span class="font-medium text-sm">/ Month</span>
-                </p>
-              </div>
-              <ul class="mb-16">
-                <li class="text-gray-500 leading-9">Up to 10 projects </li>
-                <li class="text-gray-500 leading-9">Up to 20 collabrators</li>
-                <li class="text-gray-500 leading-9">10gb of storage</li>
-                <li class="text-gray-500 leading-9">Real-time collabration</li>
-              </ul>
-              <a href="#" class="btn">Get It</a>
-            </div>
-          </div>
-          <!-- single pricing table ends -->
-          <!-- single pricing table starts -->
-          <div class="w-3/4 sm:w-2/3 md:w-1/2 lg:w-1/3">
-            <div class="pricing-box">
-              <div class="mb-3">
-                <h3 class="package-name">EXPERT</h3>
-              </div>
-              <div class="mb-5">
-                <p class="text-gray-700">
-                  <span class="font-bold text-2xl">$89.90</span>
-                  <span class="font-medium text-sm">/ Month</span>
-                </p>
-              </div>
-              <ul class="mb-16">
-                <li class="text-gray-500 leading-9">unlimited projects </li>
-                <li class="text-gray-500 leading-9">Unlimited collabrators</li>
-                <li class="text-gray-500 leading-9">Unlimited of storage</li>
-                <li class="text-gray-500 leading-9">Real-time collabration</li>
-                <li class="text-gray-500 leading-9">24x7 Support</li>
-              </ul>
-              <a href="#" class="btn">Get It</a>
-            </div>
-          </div>
-          <!-- single pricing table ends -->
-        </div>
-      </div>
-    </section>
-    <!-- Pricing Table Section End -->
-
-    <!-- carousel-area Section Start -->
-    <section class="carousel-area bg-gray-800 py-32">
-      <div class="container">
-        <div class="flex">
-          <div class="w-full relative">
-            <div class="portfolio-carousel">
-              <div>
-                <img class="w-full" src="landing/img/slide/img1.jpg" alt="">
-              </div>
-              <div>
-                <img class="w-full" src="landing/img/slide/img2.jpg" alt="">
-              </div>
-              <div>
-                <img class="w-full" src="landing/img/slide/img3.jpg" alt="">
-              </div>
-              <div>
-                <img class="w-full" src="landing/img/slide/img4.jpg" alt="">
-              </div>
-              <div>
-                <img class="w-full" src="landing/img/slide/img5.jpg" alt="">
-              </div>
-              <div>
-                <img  class="w-full" src="landing/img/slide/img6.jpg" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- carousel-area Section End -->
+    </div>
+  </div>
+</section>
+<!-- carousel-area Section End -->
 
 {{--    <!-- Subscribe Section Start -->--}}
 {{--    <section id="Subscribes" class="text-center py-20 bg-blue-100">--}}
@@ -636,182 +660,212 @@
 {{--    </section>--}}
 {{--    <!-- Subscribe Section End -->--}}
 
-    <!-- Contact Section Start -->
-    <section id="contact" class="py-24">
-      <div class="container">
-        <div class="text-center">
-          <h2 class="mb-12 text-4xl text-gray-700 font-bold tracking-wide wow fadeInDown" data-wow-delay="0.3s">Contact</h2>
-        </div>
+<!-- Contact Section Start -->
+<section id="contact" class="py-24">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="mb-12 text-4xl text-gray-700 font-bold tracking-wide wow fadeInDown" data-wow-delay="0.3s">Contact</h2>
+    </div>
 
-        <div class="flex flex-wrap contact-form-area wow fadeInUp" data-wow-delay="0.4s">
-          <div class="w-full md:w-1/2">
-            <div class="contact">
-              <h2 class="uppercase font-bold text-xl text-gray-700 mb-5 ml-3">Contact Form</h2>
-              <form id="contactForm" action="landing/contact.php">
-                <div class="flex flex-wrap">
-                  <div class="w-full sm:w-1/2 md:w-full lg:w-1/2">
-                    <div class="mx-3">
-                      <input type="text" class="form-input rounded-full" id="name" name="name" placeholder="Name" required data-error="Please enter your name">
-                    </div>
-                  </div>
-                  <div class="w-full sm:w-1/2 md:w-full lg:w-1/2">
-                    <div class="mx-3">
-                      <input type="text" placeholder="Email" id="email" class="form-input rounded-full" name="email" required data-error="Please enter your email">
-                    </div>
-                  </div>
-                  <div class="w-full">
-                    <div class="mx-3">
-                      <input type="text" placeholder="Subject" id="subject" name="subject" class="form-input rounded-full" required data-error="Please enter your subject">
-                    </div>
-                  </div>
-                  <div class="w-full">
-                    <div class="mx-3">
-                      <textarea class="form-input rounded-lg" id="message" name="message" placeholder="Your Message" rows="5" data-error="Write your message" required></textarea>
-                    </div>
-                  </div>
-                  <div class="w-full">
-                    <div class="submit-button mx-3">
-                      <button class="btn" id="form-submit" type="submit">Send Message</button>
-                    </div>
-                  </div>
+    @if(Session::has('success'))
+      <div class="text-green-600">
+        {{ Session::get('success') }}
+      </div>
+    @endif
+
+    <div class="flex flex-wrap contact-form-area wow fadeInUp" data-wow-delay="0.4s">
+      <div class="w-full md:w-1/2">
+        <div class="contact">
+          <h2 class="uppercase font-bold text-xl text-gray-700 mb-5 ml-3">Contact Form</h2>
+          <form id="contactForm" action="{{route('contact.store')}}" method="post">
+            @csrf
+            <div class="flex flex-wrap">
+              <div class="w-full sm:w-1/2 md:w-full lg:w-1/2">
+                <div class="mx-3">
+                  <input type="text" class="form-input rounded-full {{ $errors->has('name') ? 'is-invalid' : '' }}"
+                         id="name" name="name" placeholder="Name" required
+                         data-error="Please enter your name" value="{{old('name')}}">
+                  @if($errors->has('name'))
+                    <div class="text-red-600">{{ $errors->first('name') }}</div>
+                  @endif
                 </div>
-              </form>
-            </div>
-          </div>
-          <div class="w-full md:w-1/2">
-            <div class="ml-3 md:ml-12 wow fadeIn">
-              <h2 class="uppercase font-bold text-xl text-gray-700 mb-5">Get In Touch</h2>
-              <div>
-                <div class="flex flex-wrap mb-6 items-center">
-                  <div class="contact-icon">
-                    <i class="lni lni-map-marker"></i>
-                  </div>
-                  <p class="pl-3">Celeng, Indramayu</p>
+              </div>
+              <div class="w-full sm:w-1/2 md:w-full lg:w-1/2">
+                <div class="mx-3">
+                  <input type="text" placeholder="Email" id="email"
+                         class="form-input rounded-full {{ $errors->has('email') ? 'is-invalid' : '' }}" name="email"
+                         required data-error="Please enter your email" value="{{old('email')}}">
+                  @if($errors->has('email'))
+                    <div class="text-red-600">{{ $errors->first('email') }}</div>
+                  @endif
                 </div>
-                <div class="flex flex-wrap mb-6 items-center">
-                  <div class="contact-icon">
-                    <i class="lni lni-envelope"></i>
-                  </div>
-                  <p class="pl-3">
-                    <a href="#" class="block">email@gmail.com</a>
-                    <a href="#" class="block">testaja@gmail.com</a>
-                  </p>
+              </div>
+              <div class="w-full">
+                <div class="mx-3">
+                  <input type="text" placeholder="Subject" id="subject" name="subject"
+                         class="form-input rounded-full {{ $errors->has('subject') ? 'is-invalid' : '' }}"
+                         required data-error="Please enter your subject" value="{{old('subject')}}">
+                  @if($errors->has('subject'))
+                    <div class="text-red-600">{{ $errors->first('subject') }}</div>
+                  @endif
                 </div>
-                <div class="flex flex-wrap mb-6 items-center">
-                  <div class="contact-icon">
-                    <i class="lni lni-phone-set"></i>
-                  </div>
-                  <p class="pl-3">
-                    <a href="#" class="block">+42 374 5967</a>
-                    <a href="#" class="block">+99 123 5967</a>
-                  </p>
+              </div>
+              <div class="w-full">
+                <div class="mx-3">
+                  <textarea class="form-input rounded-lg {{ $errors->has('message') ? 'is-invalid' : '' }}" id="message"
+                            name="message" placeholder="Your Message"
+                            rows="5" data-error="Write your message" required>{{ old('message') }}</textarea>
+                  @if($errors->has('message'))
+                    <div class="text-red-600">{{ $errors->first('message') }}</div>
+                  @endif
+                </div>
+              </div>
+              <div class="w-full">
+                <div class="submit-button mx-3">
+                  <button class="btn" id="form-submit" type="submit">Send Message</button>
                 </div>
               </div>
             </div>
-          </div>
+          </form>
         </div>
       </div>
-    </section>
-    <!-- Contact Section End -->
-
-    <!-- Map Section Start -->
-    <section id="google-map-area">
-        <div class="mx-6 mb-6">
-            <div class="flex">
-                <div class="w-full">
-                    <object style="border:0; height: 450px; width: 100%;" data="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31719.57574548516!2d108.291246!3d-6.400835!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4fc15b3c8407ada4!2sIndramayu%20State%20Polytechnic!5e0!3m2!1sen!2sus!4v1656985081002!5m2!1sen!2sus"></object>
-                </div>
+      <div class="w-full md:w-1/2">
+        <div class="ml-3 md:ml-12 wow fadeIn">
+          <h2 class="uppercase font-bold text-xl text-gray-700 mb-5">Get In Touch</h2>
+          <div>
+            <div class="flex flex-wrap mb-6 items-center">
+              <div class="contact-icon">
+                <i class="lni lni-map-marker"></i>
+              </div>
+              <p class="pl-3">Celeng, Indramayu</p>
             </div>
-        </div>
-    </section>
-    <!-- Map Section End -->
-
-	  <!-- Footer Section Start -->
-    <footer id="footer" class="bg-gray-800 py-16">
-      <div class="container">
-        <div class="flex flex-wrap">
-          <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 wow fadeInUp" data-wow-delay="0.4s">
-            <div class="mx-3 mb-8">
-              <h3 class="font-bold text-xl text-white mb-5">Company</h3>
-              <ul>
-                <li><a href="#" class="footer-links">Press Releases</a></li>
-                <li><a href="#" class="footer-links">Mission</a></li>
-                <li><a href="#" class="footer-links">Strategy</a></li>
-              </ul>
+            <div class="flex flex-wrap mb-6 items-center">
+              <div class="contact-icon">
+                <i class="lni lni-envelope"></i>
+              </div>
+              <p class="pl-3">
+                <a href="#" class="block">email@gmail.com</a>
+                <a href="#" class="block">testaja@gmail.com</a>
+              </p>
             </div>
-          </div>
-          <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 wow fadeInUp" data-wow-delay="0.6s">
-            <div class="mx-3 mb-8">
-              <h3 class="font-bold text-xl text-white mb-5">About</h3>
-              <ul>
-                <li><a href="#" class="footer-links">Career</a></li>
-                <li><a href="#" class="footer-links">Team</a></li>
-                <li><a href="#" class="footer-links">Clients</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 wow fadeInUp" data-wow-delay="0.8s">
-            <div class="mx-3 mb-8">
-              <h3 class="font-bold text-xl text-white mb-5">Find us on</h3>
-
-              <ul class="social-icons flex justify-start">
-                <li class="mx-2">
-                  <a href="#"
-                    class="footer-icon hover:bg-indigo-500">
-                    <i class="lni lni-facebook-original" aria-hidden="true"></i>
-                  </a>
-                </li>
-                <li class="mx-2">
-                  <a href="#"
-                    class="footer-icon hover:bg-blue-400">
-                    <i class="lni lni-twitter-original" aria-hidden="true"></i>
-                  </a>
-                </li>
-                <li class="mx-2">
-                  <a href="#"
-                    class="footer-icon hover:bg-red-500">
-                    <i class="lni lni-instagram-original" aria-hidden="true"></i>
-                  </a>
-                </li>
-                <li class="mx-2">
-                  <a href="#"
-                    class="footer-icon hover:bg-indigo-600">
-                    <i class="lni lni-linkedin-original" aria-hidden="true"></i>
-                  </a>
-                </li>
-              </ul>
+            <div class="flex flex-wrap mb-6 items-center">
+              <div class="contact-icon">
+                <i class="lni lni-phone-set"></i>
+              </div>
+              <p class="pl-3">
+                <a href="#" class="block">+42 374 5967</a>
+                <a href="#" class="block">+99 123 5967</a>
+              </p>
             </div>
           </div>
         </div>
       </div>
-    </footer>
-    <!-- Footer Section End -->
+    </div>
+  </div>
+</section>
+<!-- Contact Section End -->
 
-    <section class="bg-gray-800 py-6 border-t-2 border-gray-700 border-dotted">
-      <div class="container">
-        <div class="flex flex-wrap">
-          <div class="w-full text-center">
-            <p class="text-white">Dibuat oleh <a class="text-white duration-300 hover:text-blue-600" href="https://github.com/falllll" rel="nofollow">Faldi Harido Fihan</p>
-          </div>
+<!-- Map Section Start -->
+<section id="google-map-area">
+  <div class="mx-6 mb-6">
+    <div class="flex">
+      <div class="w-full">
+        <object style="border:0; height: 450px; width: 100%;"
+                data="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31719.57574548516!2d108.291246!3d-6.400835!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4fc15b3c8407ada4!2sIndramayu%20State%20Polytechnic!5e0!3m2!1sen!2sus!4v1656985081002!5m2!1sen!2sus"></object>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Map Section End -->
+
+<!-- Footer Section Start -->
+<footer id="footer" class="bg-gray-800 py-16">
+  <div class="container">
+    <div class="flex flex-wrap">
+      <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 wow fadeInUp" data-wow-delay="0.4s">
+        <div class="mx-3 mb-8">
+          <h3 class="font-bold text-xl text-white mb-5">Company</h3>
+          <ul>
+            <li><a href="#" class="footer-links">Press Releases</a></li>
+            <li><a href="#" class="footer-links">Mission</a></li>
+            <li><a href="#" class="footer-links">Strategy</a></li>
+          </ul>
         </div>
       </div>
-    </section>
+      <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 wow fadeInUp" data-wow-delay="0.6s">
+        <div class="mx-3 mb-8">
+          <h3 class="font-bold text-xl text-white mb-5">About</h3>
+          <ul>
+            <li><a href="#" class="footer-links">Career</a></li>
+            <li><a href="#" class="footer-links">Team</a></li>
+            <li><a href="#" class="footer-links">Clients</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 wow fadeInUp" data-wow-delay="0.8s">
+        <div class="mx-3 mb-8">
+          <h3 class="font-bold text-xl text-white mb-5">Find us on</h3>
 
-    <!-- Go to Top Link -->
-    <a href="#" class="back-to-top w-10 h-10 fixed bottom-0 right-0 mb-5 mr-5 flex items-center justify-center rounded-full bg-blue-600 text-white text-lg z-20 duration-300 hover:bg-blue-400">
-      <i class="lni lni-arrow-up"></i>
-    </a>
+          <ul class="social-icons flex justify-start">
+            <li class="mx-2">
+              <a href="#"
+                 class="footer-icon hover:bg-indigo-500">
+                <i class="lni lni-facebook-original" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li class="mx-2">
+              <a href="#"
+                 class="footer-icon hover:bg-blue-400">
+                <i class="lni lni-twitter-original" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li class="mx-2">
+              <a href="#"
+                 class="footer-icon hover:bg-red-500">
+                <i class="lni lni-instagram-original" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li class="mx-2">
+              <a href="#"
+                 class="footer-icon hover:bg-indigo-600">
+                <i class="lni lni-linkedin-original" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Footer Section End -->
 
-    <!-- Preloader -->
+<section class="bg-gray-800 py-6 border-t-2 border-gray-700 border-dotted">
+  <div class="container">
+    <div class="flex flex-wrap">
+      <div class="w-full text-center">
+        <p class="text-white">Dibuat oleh <a class="text-white duration-300 hover:text-blue-600"
+                                             href="https://github.com/falllll" rel="nofollow">Faldi Harido Fihan</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Go to Top Link -->
+<a href="#"
+   class="back-to-top w-10 h-10 fixed bottom-0 right-0 mb-5 mr-5 flex items-center justify-center rounded-full bg-blue-600 text-white text-lg z-20 duration-300 hover:bg-blue-400">
+  <i class="lni lni-arrow-up"></i>
+</a>
+
+<!-- Preloader -->
 <!--     <div id="preloader">
       <div class="loader" id="loader-1"></div>
     </div> -->
-    <!-- End Preloader -->
+<!-- End Preloader -->
 
-    <!-- All js Here -->
-    <script src="landing/js/wow.js"></script>
-    <script src="landing/js/tiny-slider.js"></script>
-    <script src="landing/js/contact-form.js"></script>
-    <script src="landing/js/main.js"></script>
-  </body>
+<!-- All js Here -->
+<script src="landing/js/wow.js"></script>
+<script src="landing/js/tiny-slider.js"></script>
+<script src="landing/js/contact-form.js"></script>
+<script src="landing/js/main.js"></script>
+</body>
 </html>
