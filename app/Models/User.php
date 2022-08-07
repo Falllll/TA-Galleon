@@ -47,10 +47,4 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-        public function avatarUrl(): Attribute
-    {
-        return Attribute::make(
-            get: fn() => "https://www.gravatar.com/avatar/" . md5(strtolower($this->email)) . "?s=100&r=g"
-        );
-    }
 }
